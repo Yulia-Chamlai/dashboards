@@ -1,0 +1,121 @@
+.main-screen {
+  margin-top: 74px;
+  overflow-x: hidden;
+  min-height: 725px;
+  @media (max-width: 578px) {
+    margin-top: 29px;
+    min-height: 645px;
+  }
+
+  &::before {
+    background-image: url("./images/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 815px;
+    z-index: -1;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      justify-content: unset;
+      gap: 10px;
+    }
+    @media (max-width: 450px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__info {
+    max-width: 550px;
+    padding-top: 80px;
+    @media (max-width: 1000px) {
+      max-width: unset;
+      padding-top: 0;
+    }
+  }
+
+  &__info-title {
+    font-size: 50px;
+    line-height: 120%;
+    font-weight: 700;
+    color: white;
+    @media (max-width: 578px) {
+      font-size: 26px;
+      line-height: 37px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__info-text {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 50px;
+    @media (max-width: 578px) {
+      margin-bottom: 26px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__info-btn {
+    background-color: #ef2a82;
+    min-width: 240px;
+    padding: 16px;
+    color: white;
+    border-radius: 68px;
+    text-align: center;
+    transition: 0.5s ease;
+    &:hover {
+      background-color: #c7226c;
+      border: #c7226c;
+    }
+    @media (max-width: 578px) {
+      min-width: 100%;
+    }
+  }
+  &__img {
+    max-width: 690px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -315px;
+    @media (max-width: 1000px) {
+      position: static;
+      max-width: 100%;
+      max-height: unset;
+    }
+    img {
+      width: 690px;
+      max-height: 550px;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+      @media (max-width: 1000px) {
+        width: 100%;
+        max-height: unset;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("./images/header-small.png");
+      background-repeat: no-repeat;
+      width: 390px;
+      height: 268px;
+      top: 124px;
+      left: -69px;
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+  }
+}

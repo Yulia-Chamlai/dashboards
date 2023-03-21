@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: $font-primary;
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #8794ba;
+  background-color: #f8f9ff;
+  position: relative;
+}
+
+.container {
+  max-width: $container;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.title {
+  font-size: 40px;
+  line-height: 47px;
+  font-weight: 700;
+  color: $dark-color;
+}
